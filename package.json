@@ -1,0 +1,12 @@
+{
+  "name": "desafio-1.1",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "questao1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thiago Bastos",
+  "license": "ISC"
+}
