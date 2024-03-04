@@ -40,7 +40,13 @@ class Cliente {
         let re = /\d{2}\/\d{2}\/\d{4}/;
         if(!re.test(valor))
             throw new Error("o campo data de nascimento não contém o formato correto: DD/MM/AAAA");
-        this.#data_nascimento = valor;
+        const [dia, mes, ano] = valor.split('/').map(x => parseInt(x));
+        let nascimento = new Date(ano, mes - 1, dia);
+        let agora = new Date(Date.now());
+        let anos = Math.floor((agora - nascimento) / (1000 * 60 * 60 * 24 * 365.25));
+        if(anos < 18)
+            throw new Error("a pessoa tem menos de 18 anos");
+        this.#data_nascimento = nascimento;
     }
 
     get renda_mensal() {
