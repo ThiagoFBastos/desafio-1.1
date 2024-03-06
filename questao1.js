@@ -12,11 +12,11 @@ rl.question('digite o primeiro vértice x y: ', (line) => {
     const [x, y] = line.split(' ').map(x => parseInt(x));
     let a = new Vertice(x, y);
 
-    rl.question('digite o segundo vértice x, y: ', (line) => {
+    rl.question('digite o segundo vértice x y: ', (line) => {
         const [x, y] = line.split(' ').map(x => parseInt(x));
         let b = new Vertice(x, y);
 
-        rl.question('digite o terceiro vértice x, y: ', (line) => {
+        rl.question('digite o terceiro vértice x y: ', (line) => {
             const [x, y] = line.split(' ').map(x => parseInt(x));
             let c = new Vertice(x, y);
 

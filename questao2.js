@@ -80,17 +80,17 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question('primeiro triângulo x1, y1, x2, y2, x3, y3:  ', (line) => {
+rl.question('primeiro triângulo x1 y1 x2 y2 x3 y3:  ', (line) => {
     const [x1, y1, x2, y2, x3, y3] = line.split(' ').map(x => parseInt(x));
 
     let t1 = new Triangulo(new Vertice(x1, y1), new Vertice(x2, y2), new Vertice(x3, y3));
 
-    rl.question('segundo triângulo x1, y1, x2, y2, x3, y3: ', (line) => {
+    rl.question('segundo triângulo x1 y1 x2 y2 x3 y3: ', (line) => {
         const [x1, y1, x2, y2, x3, y3] = line.split(' ').map(x => parseInt(x));
 
         let t2 = new Triangulo(new Vertice(x1, y1), new Vertice(x2, y2), new Vertice(x3, y3));
 
-        rl.question('terceiro triângulo x1, y1, x2, y2, x3, y3: ', (line) => {
+        rl.question('terceiro triângulo x1 y1 x2 y2 x3 y3: ', (line) => {
             const [x1, y1, x2, y2, x3, y3] = line.split(' ').map(x => parseInt(x));
 
             let t3 = new Triangulo(new Vertice(x1, y1), new Vertice(x2, y2), new Vertice(x3, y3));
